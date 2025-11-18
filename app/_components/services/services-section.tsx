@@ -81,7 +81,7 @@ export const serviceList = [
     {
         icon: MapPin,
         title: "Rebuild ROM / Fake GPS",
-        description: "Layanan rebuild sistem atau konfigurasi GPS palsu untuk kebutuhan pengujian dan optimasi.",
+        description: "Layanan rebuild sistem atau konfigurasi GPS palsu untuk kebutuhan absensi.",
         link: "/",
     },
 ];
@@ -113,7 +113,7 @@ export default function ServicesSection() {
                             icon={service.icon}
                             title={service.title}
                             description={service.description}
-                            link={service.link}
+                        // link={service.link}
                         />
                     ))}
                 </div>

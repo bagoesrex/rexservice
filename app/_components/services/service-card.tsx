@@ -1,36 +1,28 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChevronRight, LucideIcon } from "lucide-react";
-import Link from "next/link";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { LucideIcon, MoveUpRight } from "lucide-react";
 
 interface ServiceCardProps {
     icon: LucideIcon
     title: string
     description: string
-    link: string
+    // link: string
 }
 
-export default function ServiceCard({ icon: Icon, title, description, link }: ServiceCardProps) {
+export default function ServiceCard({ icon: Icon, title, description }: ServiceCardProps) {
     return (
-        <Card className="shadow-xs flex flex-col h-full gap-3">
-            <CardHeader>
-                <CardTitle>
-                    <Icon size={28} strokeWidth={3} />
+        <Card className="shadow-xs flex flex-col h-full gap-1">
+            <CardHeader className="space-y-6">
+                <CardTitle className="flex flex-row justify-between items-center">
+                    <Icon size={28} strokeWidth={2} />
+                    <MoveUpRight size={20} strokeWidth={1.5} />
                 </CardTitle>
                 <CardDescription className="text-xl font-bold text-primary">
                     {title}
                 </CardDescription>
             </CardHeader>
-            <CardContent className="flex-1">
+            <CardContent>
                 <p className="text-sm">{description}</p>
             </CardContent>
-            <CardFooter className="mt-2">
-                <Link href={link} className=" hover:underline underline-offset-4 flex flex-row items-center justify-center gap-1.5">
-                    <span className="font-semibold">
-                        Learn More
-                    </span>
-                    <ChevronRight size={20} className="mt-0.5" strokeWidth={3} />
-                </Link>
-            </CardFooter>
         </Card >
     )
 }
