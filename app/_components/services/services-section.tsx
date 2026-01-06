@@ -1,130 +1,54 @@
 import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
-import { Button } from "@/components/ui/button";
-import { MessageSquareDot } from "lucide-react";
+import { Layers, Terminal, Unlock } from "lucide-react";
 import ServiceCard from "./service-card";
+import { Service } from "@/types/service";
 
-import {
-  Lock,
-  Smartphone,
-  Cpu,
-  RefreshCw,
-  ShieldOff,
-  Wrench,
-  Camera,
-  AlertTriangle,
-  HardDrive,
-  ArrowUpDown,
-  UserX,
-  KeyRound,
-  MapPin,
-} from "lucide-react";
-
-export const serviceList = [
+const services: Service[] = [
   {
-    icon: Lock,
-    title: "UBL Resmi / Instan",
-    description: "Membuka bootloader perangkat dengan metode resmi atau instan, aman tanpa kehilangan data penting.",
-    link: "/",
+    icon: Unlock,
+    title: "Unlock Bootloader",
+    shortTitle: "UBL",
+    description: "Buka kunci bootloader untuk akses penuh ke sistem. Prasyarat untuk root dan custom ROM.",
+    features: ["Support semua brand", "Proses aman", "Backup data"],
+    price: "Mulai Rp 50K",
+    color: "primary",
   },
   {
-    icon: Smartphone,
-    title: "Flash Custom Recovery",
-    description: "Instalasi custom recovery seperti TWRP atau OrangeFox agar perangkat lebih fleksibel digunakan.",
-    link: "/",
+    icon: Terminal,
+    title: "Root Access",
+    shortTitle: "ROOT",
+    description: "Dapatkan akses superuser untuk kontrol penuh. Install Magisk dan custom modules.",
+    features: ["Magisk latest", "Hide root", "Safety passed"],
+    price: "Mulai Rp 75K",
+    color: "accent",
   },
   {
-    icon: Cpu,
-    title: "Flash Custom ROM",
-    description: "Ganti sistem operasi Android dengan custom ROM pilihan untuk performa dan tampilan yang lebih segar.",
-    link: "/",
-  },
-  {
-    icon: RefreshCw,
-    title: "Flash Custom Kernel",
-    description: "Optimalkan performa dan daya tahan baterai dengan memasang custom kernel sesuai kebutuhan.",
-    link: "/",
-  },
-  {
-    icon: ShieldOff,
-    title: "Flash Auth",
-    description: "Layanan flashing khusus perangkat dengan proteksi auth, aman dan profesional.",
-    link: "/",
-  },
-  {
-    icon: Wrench,
-    title: "Root / Unroot",
-    description: "Akses penuh ke sistem Android atau kembalikan ke kondisi standar dengan aman dan cepat.",
-    link: "/",
-  },
-  {
-    icon: Camera,
-    title: "GCam",
-    description: "Instalasi Google Camera (GCam) agar hasil foto lebih maksimal dengan fitur HDR+ dan Night Sight.",
-    link: "/",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Fix Bootloop",
-    description: "Perbaikan perangkat stuck di logo atau gagal masuk sistem tanpa kehilangan data penting.",
-    link: "/",
-  },
-  {
-    icon: HardDrive,
-    title: "Fix Hardbrick",
-    description: "Pemulihan total perangkat mati total (hardbrick) dengan peralatan dan firmware khusus.",
-    link: "/",
-  },
-  {
-    icon: ArrowUpDown,
-    title: "Upgrade / Downgrade OS",
-    description: "Naik atau turunkan versi sistem operasi sesuai kebutuhan dengan metode aman dan stabil.",
-    link: "/",
-  },
-  {
-    icon: UserX,
-    title: "Clean / Bypass MI Account",
-    description: "Layanan bypass atau pembersihan akun Mi Cloud untuk perangkat terkunci.",
-    link: "/",
-  },
-  {
-    icon: KeyRound,
-    title: "Unlock Lockscreen / FRP",
-    description: "Buka kunci layar atau FRP Google Account dengan cepat dan aman tanpa kehilangan data.",
-    link: "/",
-  },
-  {
-    icon: MapPin,
-    title: "Rebuild ROM / Fake GPS",
-    description: "Layanan rebuild sistem atau konfigurasi GPS palsu untuk kebutuhan absensi.",
-    link: "/",
+    icon: Layers,
+    title: "Custom ROM",
+    shortTitle: "ROM",
+    description: "Install custom ROM pilihan kamu. Performa maksimal dengan fitur lengkap.",
+    features: ["LineageOS", "Pixel Experience", "MIUI EU"],
+    price: "Mulai Rp 100K",
+    color: "primary",
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section>
-      <MaxWidthWrapper className="min-h-screen space-y-10 px-10 py-20">
-        <div className="flex flex-col">
-          <div className="flex flex-row items-center justify-between">
-            <h2 className="max-w-xl text-4xl font-bold text-gray-900">Our Services</h2>
-            <Button className="mt-2.5 flex items-center gap-2 rounded-full py-5">
-              <MessageSquareDot />
-              <span className="text-md">Book Now</span>
-            </Button>
-          </div>
-          <p className="mt-1 max-w-xl text-gray-600">
-            Whatever your gadget problem, Rex Service is here to help. Quick fixes, honest service, and results you can rely on.
+    <section id="services">
+      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-11 py-18">
+        <div className="space-y-3 text-center">
+          <span className="text-primary block text-sm tracking-widest uppercase">Layanan Kami</span>
+          <h2 className="text-4xl font-bold">
+            Solusi <span className="gradient-text">Lengkap</span> untuk HP Kamu
+          </h2>
+          <p className="text-muted-foreground max-w-xl text-sm">
+            Dari unlock bootloader hingga custom ROM, kami siap membantu mengoptimalkan device Android kamu.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-5">
-          {serviceList.map((service) => (
-            <ServiceCard
-              key={service.title}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              // link={service.link}
-            />
+        <div className="grid w-full grid-cols-3 gap-8 px-10">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
       </MaxWidthWrapper>
