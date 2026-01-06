@@ -1,17 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
+
+const navbars = [
+  { name: "Layanan", href: "#services" },
+  { name: "Tentang", href: "#whychoose" },
+  { name: "Testimoni", href: "#testimonials" },
+  { name: "FAQ", href: "#faq" },
+];
 
 export default function Header() {
   return (
-    <header className="fixed w-full bg-white/80 px-0 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-xs border-b px-4 py-2.5">
-        <Link href={"/"} className="group flex items-center gap-3 text-xl font-semibold text-gray-800">
-          <Image src={"/logo.svg"} alt={"main icon"} width={32} height={32} priority />
+    <header className="fixed w-full border-b bg-white/80 px-0 backdrop-blur-lg">
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-xs px-4 py-2.75">
+        <Link href={"/"} className="flex items-center gap-3">
+          <div className="bg-primary/20 relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-md">
+            <Image src="/logo.svg" alt="main icon" width={32} height={32} priority className="absolute right-0.5 scale-125" />
+          </div>
           <div className="flex flex-col">
-            <span className="group-hover:underline">Rex Service</span>
-            <p className="text-xs font-medium text-gray-500">Fast and reliable service.</p>
+            <p className="font-semibold tracking-wide uppercase">
+              <span className="text-primary font-bold">Rex</span>
+              Service
+            </p>
+            <p className="text-muted-foreground text-xs font-medium tracking-[0.4px]">Fast and reliable service.</p>
           </div>
         </Link>
+        <nav className="flex items-center gap-6">
+          {navbars.map((navbar, index) => (
+            <a
+              key={index}
+              href={navbar.href}
+              className="text-muted-foreground hover:text-primary text-sm font-medium tracking-wider uppercase transition-colors duration-300"
+            >
+              {navbar.name}
+            </a>
+          ))}
+          <Button variant="navbar" size="sm">
+            Hubungi Kami
+          </Button>
+        </nav>
       </div>
     </header>
   );
