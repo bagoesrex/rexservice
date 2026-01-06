@@ -19,11 +19,11 @@ export default function HeroSection() {
           Layanan UBL, Root, dan Custom ROM untuk semua jenis smartphone Android. Maksimalkan performa device kamu dengan aman.
         </p>
         <div className="flex flex-row justify-center gap-4">
-          <Button>
+          <Button variant={"hero"}>
             <Rocket className="size-4" />
             <span className="uppercase">Mulai Sekarang</span>
           </Button>
-          <Button className="border-primary border-[1.5px]" variant={"ghost"}>
+          <Button variant={"heroOutline"}>
             <Shield className="size-4" />
             <span className="uppercase">Lihat Layanan</span>
           </Button>
