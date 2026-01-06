@@ -36,7 +36,7 @@ const services: Service[] = [
 export default function ServicesSection() {
   return (
     <section id="services">
-      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-11 py-18">
+      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-13 py-18">
         <div className="space-y-3 text-center">
           <span className="text-primary block text-sm tracking-widest uppercase">Layanan Kami</span>
           <h2 className="text-4xl font-bold">

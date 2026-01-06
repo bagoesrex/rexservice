@@ -12,7 +12,7 @@ const stats: Stat[] = [
 export default function StatsSection() {
   return (
     <section id="stats">
-      <MaxWidthWrapper className="flex items-center justify-around py-18">
+      <MaxWidthWrapper className="flex items-center justify-around py-15">
         {stats.map((stat, index) => (
           <StatItem stat={stat} key={index} />
         ))}
