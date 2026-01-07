@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
             <Button onClick={goPrev} variant={"testimonialsNav"} className="size-fit p-3">
               <ChevronLeft className="size-3.5" strokeWidth={2.5} />
             </Button>
-            <div className="flex gap-1">
+            <div className="flex justify-center gap-1" style={{ width: testimonials.length * 25 }}>
               {testimonials.map((_, index) => (
                 <Button
                   key={index}
