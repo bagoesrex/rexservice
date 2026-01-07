@@ -20,7 +20,9 @@ const buttonVariants = cva(
         hero: "bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-6 shadow-lg hover:shadow-xl hover:scale-105",
         heroOutline: "border-2 border-primary/50 bg-transparent text-foreground hover:border-primary hover:bg-primary/10 text-base px-8 py-6",
         navbar:
-          "border-2 border-primary/50 bg-transparent text-primary hover:borer-primary hover:bg-primary/90 text-base px-8 py-4 hover:shadow-md hover:scale-105 hover:text-accent-foreground",
+          "border-2 border-primary/50 bg-transparent text-primary hover:border-primary hover:bg-primary/90 text-base px-8 py-4 hover:shadow-md hover:scale-105 hover:text-accent-foreground",
+        testimonialsNav: "border-1 bg-transparent hover:border-primary hover:bg-primary/30 rounded-full transition-colors duration-300",
+        testimonialsDot: "rounded-full bg-border transition-all duration-300",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
