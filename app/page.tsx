@@ -1,3 +1,4 @@
+import FAQSection from "./_components/faq/faq-section";
 import HeroSection from "./_components/hero/hero-section";
 import ServicesSection from "./_components/services/services-section";
 import StatsSection from "./_components/stats/stats-section";
@@ -16,6 +17,8 @@ export default function Home() {
       <WhyChooseSection />
 
       <TestimonialsSection />
+
+      <FAQSection />
 
       {/* <HowItWorksSection /> */}
     </main>
