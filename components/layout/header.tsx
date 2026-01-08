@@ -25,7 +25,7 @@ export default function Header() {
             <p className="text-muted-foreground text-xs font-medium tracking-[0.4px]">Fast and reliable service.</p>
           </div>
         </Link>
-        <nav className="flex items-center gap-6">
+        <nav className="hidden items-center gap-6 sm:flex">
           {navbars.map((navbar, index) => (
             <a
               key={index}

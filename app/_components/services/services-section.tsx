@@ -36,17 +36,17 @@ const services: Service[] = [
 export default function ServicesSection() {
   return (
     <section id="services">
-      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-13 py-18">
-        <div className="space-y-3 text-center">
+      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-8 py-18 sm:gap-13">
+        <div className="flex flex-col items-center justify-center gap-1.5 text-center sm:gap-3">
           <span className="text-primary block text-sm tracking-widest uppercase">Layanan Kami</span>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-[1.5rem] font-bold sm:text-4xl">
             Solusi <span className="gradient-text">Lengkap</span> untuk HP Kamu
           </h2>
-          <p className="text-muted-foreground max-w-xl text-sm">
+          <p className="text-muted-foreground max-w-xs text-xs sm:max-w-xl sm:text-sm">
             Dari unlock bootloader hingga custom ROM, kami siap membantu mengoptimalkan device Android kamu.
           </p>
         </div>
-        <div className="grid w-full grid-cols-3 gap-8 px-10">
+        <div className="grid w-full max-w-6xl grid-cols-1 gap-3 sm:gap-7 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}

@@ -39,16 +39,18 @@ const faqs: FAQ[] = [
 export default function FAQSection() {
   return (
     <section id="faq">
-      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-13 py-18">
+      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-8 py-18 sm:gap-13">
         <div className="space-y-3 text-center">
           <span className="text-primary block text-sm tracking-widest uppercase">FAQ</span>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-[1.5rem] font-bold sm:text-4xl">
             Pertanyaan <span className="gradient-text">Umum</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl text-sm">Jawaban untuk pertanyaan yang sering ditanyakan seputar layanan kami.</p>
+          <p className="text-muted-foreground max-w-xs text-xs sm:max-w-xl sm:text-sm">
+            Jawaban untuk pertanyaan yang sering ditanyakan seputar layanan kami.
+          </p>
         </div>
         <div className="w-full max-w-3xl">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-2.5 sm:space-y-4">
             {faqs.map((faq, index) => (
               <FAQItem key={index} index={index} faq={faq} />
             ))}

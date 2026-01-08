@@ -38,15 +38,17 @@ const features = [
 export default function WhyChooseSection() {
   return (
     <section id="whychoose">
-      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-13 py-18">
-        <div className="space-y-3 text-center">
+      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-8 py-18 sm:gap-13">
+        <div className="flex flex-col items-center justify-center gap-1.5 text-center sm:gap-3">
           <span className="text-primary block text-sm tracking-widest uppercase">Mengapa Memilih Kami</span>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-[1.5rem] font-bold sm:text-4xl">
             <span className="gradient-text">Keunggulan </span> REXSERVICE
           </h2>
-          <p className="text-muted-foreground max-w-xl text-sm">Kami berkomitmen memberikan layanan terbaik dengan hasil yang memuaskan.</p>
+          <p className="text-muted-foreground max-w-xs text-xs sm:max-w-xl sm:text-sm">
+            Kami berkomitmen memberikan layanan terbaik dengan hasil yang memuaskan.
+          </p>
         </div>
-        <div className="grid w-full grid-cols-3 gap-3 px-10">
+        <div className="grid w-full max-w-6xl grid-cols-1 gap-3 sm:gap-7 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <FeatureCard feature={feature} key={index} />
           ))}

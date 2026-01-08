@@ -59,13 +59,15 @@ export default function TestimonialsSection() {
 
   return (
     <section id="testimonials">
-      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-13 py-18">
-        <div className="space-y-3 text-center">
+      <MaxWidthWrapper className="flex flex-col items-center justify-center gap-8 py-18 sm:gap-13">
+        <div className="flex flex-col items-center justify-center gap-1.5 text-center sm:gap-3">
           <span className="text-primary block text-sm tracking-widest uppercase">Testimoni</span>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-[1.5rem] font-bold sm:text-4xl">
             Apa Kata <span className="gradient-text">Mereka</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl text-sm">Kami berkomitmen memberikan layanan terbaik dengan hasil yang memuaskan.</p>
+          <p className="text-muted-foreground max-w-xs text-xs sm:max-w-xl sm:text-sm">
+            Kami berkomitmen memberikan layanan terbaik dengan hasil yang memuaskan.
+          </p>
         </div>
         <div className="flex w-full max-w-3xl flex-col items-center justify-center gap-5">
           <TestimonialCard testimonial={testimonials[currentIndex]} />
