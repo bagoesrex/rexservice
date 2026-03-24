@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Rex Service",
-  description: "Rex Service menyediakan jasa custom ROM Android profesional untuk meningkatkan performa, stabilitas, dan fitur perangkat Anda dengan proses aman dan terpercaya."
+  description:
+    "Rex Service menyediakan jasa custom ROM Android profesional untuk meningkatkan performa, stabilitas, dan fitur perangkat Anda dengan proses aman dan terpercaya.",
 };
 
 export default function RootLayout({

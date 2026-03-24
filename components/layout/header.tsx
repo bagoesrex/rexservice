@@ -22,7 +22,7 @@ export default function Header() {
               <span className="text-primary font-bold">Rex</span>
               Service
             </p>
-            <p className="text-muted-foreground text-xs font-medium tracking-[0.4px]">Fast and reliable service.</p>
+            <p className="text-muted-foreground text-xs font-medium tracking-[0.4px]">Tips & Trick Android.</p>
           </div>
         </Link>
         <nav className="hidden items-center gap-6 sm:flex">
