@@ -1,7 +1,7 @@
 import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
 import { Button } from "@/components/ui/button";
 import CustomBadge from "@/components/ui/custom-badge";
-import { ChevronRightIcon, Cpu } from "lucide-react";
+import { ChevronRightIcon, Cpu, Wrench } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -19,12 +19,18 @@ export default function HeroSection() {
           Kumpulan tutorial oprek Android, custom ROM, root, dan download firmware terbaru untuk berbagai device.
         </p>
         <div className="flex w-full max-w-xs flex-col justify-center gap-4 sm:w-fit sm:flex-row">
-          <Button variant={"hero"}>
+          <Button variant={"hero"} disabled>
             <span>Baca Artikel</span>
             <ChevronRightIcon />
           </Button>
-          <Button variant={"heroOutline"}>
+          <Button variant={"heroOutline"} disabled className="relative">
             <span>Download Firmware</span>
+            <div className="absolute -top-2 -right-2 z-10">
+              <span className="flex items-center gap-1 rounded-md bg-orange-500 px-2 py-1 text-xs font-semibold text-white shadow-md">
+                <Wrench size={12} />
+                Maintenance
+              </span>
+            </div>
           </Button>
         </div>
       </MaxWidthWrapper>
