@@ -1,7 +1,9 @@
+import HomeHero from "@/components/sections/home/HomeHero";
+
 export default function HomePage() {
   return (
-    <main className="">
-      {/* <h1>Hello World</h1> */}
+    <main>
+      <HomeHero />
     </main>
   );
 }

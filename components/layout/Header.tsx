@@ -10,7 +10,7 @@ const navbars = [
 
 export default function Header() {
   return (
-    <header className="fixed w-full border-b bg-white/20 px-0 backdrop-blur-lg">
+    <header className="fixed w-full z-50 border-b bg-white/20 px-0 backdrop-blur-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between rounded-xs px-4 py-2.75">
         <Link href={"/"} className="flex items-center gap-3">
           <div className="bg-primary/20 relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-md">
