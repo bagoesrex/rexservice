@@ -6,6 +6,13 @@ interface MaxWidthWrapperProps {
   className?: string;
 }
 
-export default function MaxWidthWrapper({ children, className }: MaxWidthWrapperProps) {
-  return <div className={cn("mx-auto w-full max-w-7xl px-5.5", className)}>{children}</div>;
+export default function MaxWidthWrapper({
+  children,
+  className,
+}: MaxWidthWrapperProps) {
+  return (
+    <div className={cn("mx-auto w-full max-w-7xl px-5.5", className)}>
+      {children}
+    </div>
+  );
 }

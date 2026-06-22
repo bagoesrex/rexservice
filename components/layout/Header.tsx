@@ -14,14 +14,23 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between rounded-xs px-4 py-2.75">
         <Link href={"/"} className="flex items-center gap-3">
           <div className="bg-primary/20 relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-md">
-            <Image src="/logo.svg" alt="main icon" width={32} height={32} priority className="absolute right-0.5 scale-125" />
+            <Image
+              src="/logo.svg"
+              alt="main icon"
+              width={32}
+              height={32}
+              priority
+              className="absolute right-0.5 scale-125"
+            />
           </div>
           <div className="flex flex-col">
             <p className="font-semibold tracking-wide uppercase">
               <span className="text-primary font-bold">Rex</span>
               Service
             </p>
-            <p className="text-muted-foreground text-xs font-medium tracking-[0.4px]">Tips & Trick Android.</p>
+            <p className="text-muted-foreground text-xs font-medium tracking-[0.4px]">
+              Tips & Trick Android.
+            </p>
           </div>
         </Link>
         <nav className="hidden items-center gap-6 sm:flex">

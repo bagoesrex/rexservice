@@ -14,7 +14,12 @@ const sizeMap = {
   xl: "text-[48px]",
 };
 
-export default function Icon({ name, size = "md", filled = false, className }: IconProps) {
+export default function Icon({
+  name,
+  size = "md",
+  filled = false,
+  className,
+}: IconProps) {
   return (
     <span
       className={cn("material-symbols-outlined", sizeMap[size], className)}

@@ -6,21 +6,21 @@ export default function HomeHero() {
   return (
     <section id="hero">
       <MaxWidthWrapper className="flex gap-4 pt-30 pb-20 ">
-        <div className="relative overflow-hidden bg-linear-to-br from-[#f2f3fe] to-[#e1e2ec] min-h-90 rounded-[50px] p-15 grid grid-cols-2 gap-4">
+        <div className="relative overflow-hidden bg-linear-to-br from-[#f2f3fe] to-[#e1e2ec] min-h-90 rounded-[50px] p-5 md:p-15 w-full grid grid-cols-1 md:grid-cols-2 md:gap-4">
           <div className="absolute -top-24 -right-24 h-100 w-100 lg:h-125 lg:w-125 rounded-full bg-(--color-primary-fixed) opacity-25 blur-[100px] pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 h-75 w-75 lg:h-100 lg:w-100 rounded-full bg-(--color-secondary-fixed) opacity-20 blur-[100px] pointer-events-none" />
 
-          <div className="">
-            <div className="max-w-100">
+          <div className="text-center md:text-left">
+            <div className="max-w-full md:max-w-100">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-(--color-primary) border border-primary/20">
                 <span className="text-[14px] font-bold">{homeHero.badge}</span>
               </div>
 
-              <h1 className="mb-6 text-[50px] leading-[1.1] font-extrabold tracking-tight  ">
+              <h1 className="mb-6 text-[30px] md:text-[50px] leading-[1.1] font-extrabold tracking-tight">
                 {homeHero.title}
               </h1>
             </div>
-            <p className="mb-10 max-w-xl text-lg leading-relaxed">
+            <p className="mb-10 max-w-120 text-sm md:text-lg leading-relaxed">
               {homeHero.description}
             </p>
           </div>
@@ -41,5 +41,5 @@ export default function HomeHero() {
         </div>
       </MaxWidthWrapper>
     </section>
-  )
+  );
 }
