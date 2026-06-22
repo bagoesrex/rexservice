@@ -1,21 +1,7 @@
-import HeroSection from "./_components/hero/hero-section";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <HeroSection />
-
-      {/* <ServicesSection />
-
-      <StatsSection />
-
-      <WhyChooseSection />
-
-      <TestimonialsSection />
-
-      <FAQSection /> */}
-
-      {/* <HowItWorksSection /> */}
+    <main className="">
+      <h1>Hello World</h1>
     </main>
   );
 }

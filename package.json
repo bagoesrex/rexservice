@@ -1,5 +1,5 @@
 {
-  "name": "rexservice",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,19 +8,13 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@radix-ui/react-accordion": "^1.2.12",
-    "@radix-ui/react-avatar": "^1.1.11",
-    "@radix-ui/react-slot": "^1.2.3",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.548.0",
-    "next": "16.1.6",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "tailwind-merge": "^3.3.1"
+    "next": "16.2.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -29,11 +23,17 @@
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.0.1",
-    "prettier": "3.7.4",
-    "prettier-plugin-tailwindcss": "0.7.2",
+    "eslint-config-next": "16.2.9",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "3.8.4",
+    "prettier-plugin-tailwindcss": "0.8.0",
     "tailwindcss": "^4",
-    "tw-animate-css": "^1.4.0",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
