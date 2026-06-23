@@ -1,28 +1,49 @@
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import { homeHero } from "@/content/home";
+import { createWhatsappUrl } from "@/lib/routes";
+import { ArrowRight, MessageSquareText } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomeHero() {
+  const waUrl = createWhatsappUrl(homeHero.primaryCtaMessage);
+
   return (
     <section id="hero">
       <MaxWidthWrapper className="flex gap-4 pt-30 pb-20 ">
-        <div className="relative overflow-hidden bg-linear-to-br from-[#f2f3fe] to-[#e1e2ec] min-h-90 rounded-[50px] p-5 md:p-15 w-full grid grid-cols-1 md:grid-cols-2 md:gap-4">
+        <div className="relative overflow-hidden bg-linear-to-br from-surface-container-low to-[#e1e2ec] min-h-90 rounded-[50px] p-5 md:px-15 md:py-10 w-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
           <div className="absolute -top-24 -right-24 h-100 w-100 lg:h-125 lg:w-125 rounded-full bg-(--color-primary-fixed) opacity-25 blur-[100px] pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 h-75 w-75 lg:h-100 lg:w-100 rounded-full bg-(--color-secondary-fixed) opacity-20 blur-[100px] pointer-events-none" />
 
-          <div className="text-center md:text-left">
-            <div className="max-w-full md:max-w-100">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-(--color-primary) border border-primary/20">
-                <span className="text-[14px] font-bold">{homeHero.badge}</span>
-              </div>
-
-              <h1 className="mb-6 text-[30px] md:text-[50px] leading-[1.1] font-extrabold tracking-tight">
-                {homeHero.title}
-              </h1>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-(--color-primary) border border-primary/20">
+              <span className="text-[14px] font-bold">{homeHero.badge}</span>
             </div>
-            <p className="mb-10 max-w-120 text-sm md:text-lg leading-relaxed">
+
+            <h1 className="max-w-full md:max-w-150 mb-6 text-[30px] md:text-[50px] leading-[1.1] font-extrabold tracking-tight [word-spacing:6px]">
+              {homeHero.title}
+            </h1>
+            <p className="mb-5 max-w-120 text-sm text-(--color-on-surface-variant) md:text-lg leading-relaxed ">
               {homeHero.description}
             </p>
+            <div className="flex flex-wrap text-sm md:justify-start justify-center md:text-lg gap-4 mb-5">
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-(--color-primary) px-5 py-2.5 md:px-8 md:py-4 font-semibold text-(--color-on-primary) shadow-lg shadow-(--color-primary)/30 transition-all hover:brightness-110 hover:-translate-y-0.5 active:scale-95"
+              >
+                <MessageSquareText />
+                {homeHero.primaryCtaLabel}
+              </a>
+              <Link
+                href={homeHero.secondaryCtaHref}
+                className="inline-flex items-center gap-2 rounded-full border-2 border-(--color-primary) px-5 py-2.5 md:px-8 md:py-4 font-semibold text-(--color-primary) transition-all hover:bg-(--color-primary)/10 active:scale-95"
+              >
+                {homeHero.secondaryCtaLabel}
+                <ArrowRight />
+              </Link>
+            </div>
           </div>
           <div className="flex justify-center">
             <div className="relative z-10 w-full max-w-md">
