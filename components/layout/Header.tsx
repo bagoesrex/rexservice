@@ -15,21 +15,21 @@ export default function Header() {
         <Link href={"/"} className="flex items-center gap-3">
           <div className="bg-primary/20 relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-md">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="main icon"
               width={32}
               height={32}
               priority
-              className="absolute right-0.5 scale-125"
+              className="absolute scale-125"
             />
           </div>
           <div className="flex flex-col">
-            <p className="font-semibold tracking-wide uppercase">
-              <span className="text-primary font-bold">Rex</span>
+            <p className="tracking-wide uppercase font-extrabold">
+              <span className="text-primary ">Rex</span>
               Service
             </p>
             <p className="text-muted-foreground text-xs font-medium tracking-[0.4px]">
-              Tips & Trick Android.
+              Jasa Oprek Android.
             </p>
           </div>
         </Link>
