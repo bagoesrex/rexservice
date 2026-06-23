@@ -15,7 +15,7 @@ export default function Header() {
         <Link href={"/"} className="flex items-center gap-3">
           <div className="bg-primary/20 relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-md">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="main icon"
               width={32}
               height={32}
